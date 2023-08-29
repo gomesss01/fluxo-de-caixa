@@ -11,14 +11,14 @@ class CentroCustoController extends Controller
     public function index()
     {
         $centroCustos = CentroCusto::orderBy('centro_custo')->paginate(10);
-        return view('centro.index')->with(compact('$centroCustos'));
+        return view('centro.index')->with(compact('centroCustos'));
     }
 
  
     public function create()
     {
         $centro = null;
-        return view('centro.form')->with(compact('$centro'));
+        return view('centro.form')->with(compact('centro'));
     }
 
     

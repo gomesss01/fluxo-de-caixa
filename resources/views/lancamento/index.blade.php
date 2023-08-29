@@ -1,6 +1,6 @@
 @extends('layouts.base')
 @section('content')
-    <h1>INDEX - LANCAMENTOS</h1>
+    <h1>Lançamentos</h1>
     <h4>{{Auth::user()->name}}</h4>
 
     {{-- alerts --}}
@@ -42,6 +42,12 @@
             </tbody>
         </table>
     </div>
+
+    <style>
+        h1{
+            text-align: center;
+        }
+    </style>
 
 {{-- Modal Excluir --}}
 @include('layouts.partials.modalExcluir')
