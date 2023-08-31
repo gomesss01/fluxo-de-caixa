@@ -1,7 +1,8 @@
 @extends('layouts.base')
 @section('content')
     <h1>Lançamentos</h1>
-    <h4>{{Auth::user()->name}}</h4>
+    <h2>{{Auth::user()->name}}</h2>
+    <hr>
 
     {{-- alerts --}}
     @include('layouts.partials.alerts')
@@ -12,9 +13,9 @@
             <thead>
                 <caption>LISTA DE</caption>
                 <tr>
-                    <th>#</th>
-                    <th>Column 2</th>
-                    <th>Column 3</th>
+                    <th class="col-2">#</th>
+                    <th>Valor</th>
+                    <th>Descrição</th>
                 </tr>
             </thead>
             <tbody class="table-group-divider">
@@ -46,6 +47,11 @@
     <style>
         h1{
             text-align: center;
+        }
+        h2{
+            font-family: fantasy;
+            font-size: 18px
+            
         }
     </style>
 

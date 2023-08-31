@@ -27,7 +27,7 @@
       </div>
     </div>
   </div>
-  <br>
+  <hr>
 
   <style>
     a{

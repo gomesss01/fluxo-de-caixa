@@ -29,7 +29,7 @@ Route::prefix('centro-custo')->controller(CentroCustoController::class)->
 middleware('auth')->group(function(){
     Route::get('/','index')->name('centro.index');
     Route::get('/novo','create')->name('centro.create');
-    Route::get('/editar/{id}')->name('centro.edit');
+    Route::get('/editar/{id}','edit')->name('centro.edit');
     Route::get('exibir/{id}','show')->name('centro.show');
     Route::post('cadastrar','store')->name('centro.store');
     Route::post('atualizar/{id}','update')->name('centro.update');
