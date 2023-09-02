@@ -31,11 +31,12 @@ class CentroCustoController extends Controller
     
     public function show( int $id)
     {
+
         $centro = CentroCusto::with([
             'lancamentos',
             'lancamentos.tipo',
             'lancamentos.usuario',
-        ])->find($id)->paginate(10);
+        ])->find($id);
 
         return view('centro.show')-> with(compact('centro'));
     }
