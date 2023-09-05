@@ -19,7 +19,7 @@
                 <caption>LISTA DE</caption>
                 <tr>
                     <th class="col-2">#</th>
-                    <th>Data</th>
+                    <th>Vencimento</th>
                     <th>Tipo</th>
                     <th>Valor</th>
                     <th>Centro de Custo</th>
@@ -50,13 +50,13 @@
                                 </button>
                             </div>
                         </td>
-                        <td>Item</td>
-                        <td>Item</td>
-                        <td>Item</td>
-                        <td>Item</td>
-                        <td>Item</td>
-                        <td>Item</td>
-                        <td>Item</td>
+                        <td>{{$lancamento ->vencimento->format('d/m/Y')}}</td>
+                        <td>{{$lancamento ->tipo->tipo}}</td>
+                        <td>R$ {{$lancamento ->valor}}</td>
+                        <td>{{$lancamento->centroCusto->centro_custo}}</td>
+                        <td>{{$lancamento ->descricao}}</td>
+                        <td>{{$lancamento->usuario->name}}</td>
+                        <td>{{$lancamento->created_at->format('d/m/Y \a\s H:i')}}</td>
                     </tr>
                 @empty
                    <tr>
