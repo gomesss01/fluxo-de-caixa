@@ -64,7 +64,7 @@
             old('valor')
           }}"
          required>
-    </div>
+    </div>0
     <div class="col-md-3">
         <label class="form-label" for="anexo" >
             Anexo
